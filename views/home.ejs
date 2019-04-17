@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOME</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <meta http-equiv="Refresh" content="60"> 
+    </head>
+    <body>
+       <nav class="navbar navbar-expand-sm justify-content-end bg-dark">
+          <% if(!currentUser){ %>
+            <a href="/signup" class="navbar-brand btn btn-outline-primary">Sign UP</a>
+            <a href="/login" class="navbar-brand btn btn-outline-primary">LOG IN</a>
+          <% }else{ %>
+            <button class="btn btn-outline-success"><%=currentUser.username%></button>
+            <a href="/logout" class="navbar-brand btn btn-danger">LOG OUT</a>
+          <%  } %>
+       </nav>
+       <h1>working</h1>
+       
+       </body>
+      </html>

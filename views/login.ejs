@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOG IN</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+    </head>
+    <body>
+       <nav class="navbar navbar-expand-sm justify-content-end bg-dark">
+          <% if(!currentUser){ %>
+            <a href="/signup" class="navbar-brand btn btn-outline-primary">Sign UP</a>
+            <a href="/login" class="navbar-brand btn btn-outline-primary ">LOG IN</a>
+          <% }%>
+       </nav>
+        <div class="container">
+            <div class="row ">
+                <div style="margin: 0 auto">
+                    <h1 class="display-2 text-success" style="text-align:center">LOGIN</h1>
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label><strong>Enter username</strong></label>
+                                <input type="text" class="form-control" name="username" placeholder="enter name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label><strong>Enter password</strong></label>
+                                <input type="password" class="form-control" name="password" placeholder="enter password" required/>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-lg btn-block btn-outline-success">LOGIN</button></button>
+                            </div>
+                        </div>
+                    </form>
+                    <a href="/signup" class="btn btn-outline-warning">Go back to signup</a>
+            </div>
+        </div>
+    </body>
+</html>
